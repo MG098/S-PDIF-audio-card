@@ -51,8 +51,59 @@
           "min_clearance": 0.1524
         }
       },
-      "diff_pair_dimensions": [],
-      "drc_exclusions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
+      "drc_exclusions": [
+        [
+          "copper_edge_clearance|132075000|146540000|30b1aab2-3980-4017-b6d5-a814049dee19|37d48c45-a181-43d1-be3a-2fde7a8fab42",
+          ""
+        ],
+        [
+          "copper_edge_clearance|138375000|144840000|fce5321e-553b-4d52-a275-5e812bcb1333|ea4b6617-a1cc-48ad-8c4b-9c0ebce14dcf",
+          ""
+        ],
+        [
+          "copper_edge_clearance|141375000|146540000|081bf8e7-c447-453b-a1ec-c9a45f745b45|c411e5cd-17f9-44cd-9600-049003f20d53",
+          ""
+        ],
+        [
+          "copper_edge_clearance|147675000|144840000|5d02a77b-7714-4184-aed1-1631800b4395|108dee07-19b5-4a19-89e2-d34d6408ceff",
+          ""
+        ],
+        [
+          "courtyards_overlap|130605000|144968862|00000000-0000-0000-0000-00005fd86ac9|b370f764-41ff-4d72-a4f7-38d26e4c3b42",
+          ""
+        ],
+        [
+          "courtyards_overlap|144295000|130705000|00000000-0000-0000-0000-00005fd711fa|05b66fcd-fc1f-46b7-8263-7e3f974ea5ce",
+          ""
+        ],
+        [
+          "courtyards_overlap|149145000|147620251|00000000-0000-0000-0000-00005fd86ad1|f8b72697-dad1-4bca-bdeb-6c14eb40766f",
+          ""
+        ],
+        [
+          "solder_mask_bridge|128500000|146500000|113a9f42-9eca-431a-9d28-eea80d89ab05|f7305acf-dd0a-41de-9f94-84d65b8175f5",
+          ""
+        ],
+        [
+          "solder_mask_bridge|128500000|146500000|3e29b1f9-c7fe-4af4-810c-c08eb777710e|f7305acf-dd0a-41de-9f94-84d65b8175f5",
+          ""
+        ],
+        [
+          "solder_mask_bridge|151489287|146500000|a54a89d4-341a-4d5d-90ee-71f763656102|09ffdc8a-6cbd-46ba-a232-edb736417b42",
+          ""
+        ],
+        [
+          "solder_mask_bridge|151489287|146500000|ffcb1bd6-1662-4d1e-bfc3-bb5ff014343d|09ffdc8a-6cbd-46ba-a232-edb736417b42",
+          ""
+        ]
+      ],
       "meta": {
         "filename": "board_design_settings.json",
         "version": 2
@@ -118,11 +169,11 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.0,
+        "min_clearance": 0.1,
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.025,
         "min_groove_width": 0.0,
-        "min_hole_clearance": 0.25,
+        "min_hole_clearance": 0.2,
         "min_hole_to_hole": 0.25,
         "min_microvia_diameter": 0.2,
         "min_microvia_drill": 0.1,
@@ -131,9 +182,9 @@
         "min_text_height": 0.8,
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.1524,
-        "min_via_annular_width": 0.1,
-        "min_via_diameter": 0.5,
+        "min_track_width": 0.1,
+        "min_via_annular_width": 0.075,
+        "min_via_diameter": 0.45,
         "solder_mask_to_copper_clearance": 0.0,
         "use_height_for_length_calcs": true
       },
@@ -183,11 +234,11 @@
       ],
       "track_widths": [
         0.0,
-        0.1524,
-        0.254,
-        0.381,
-        0.508,
-        0.8128
+        0.1,
+        0.15,
+        0.2,
+        0.3,
+        0.5
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -221,7 +272,7 @@
           "drill": 0.0
         },
         {
-          "diameter": 0.5,
+          "diameter": 0.45,
           "drill": 0.3
         }
       ],
@@ -475,7 +526,7 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.2,
+        "clearance": 0.1,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -487,8 +538,8 @@
         "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.25,
-        "via_diameter": 0.8,
-        "via_drill": 0.4,
+        "via_diameter": 0.45,
+        "via_drill": 0.3,
         "wire_width": 6
       }
     ],
@@ -537,7 +588,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "output/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "Expansion_Card.step",
